@@ -1,0 +1,202 @@
+BÀI TẬP CẤU TRÚC DỮ LIỆU – LIST & DICTIONARY (PYTHON CƠ BẢN)
+Khoa Công nghệ Thông tin – UTEHY
+
+-----------------------------------------
+BÀI 1. QUẢN LÝ DANH SÁCH KHOA TRONG TRƯỜNG
+-----------------------------------------
+
+Mô tả:
+Trường Đại học SPKT Hưng Yên có nhiều khoa khác nhau. Hãy viết chương trình Python để quản lý danh sách các khoa, sử dụng LIST.
+
+Yêu cầu chung:
+- Lưu trữ danh sách tên các khoa trong một list.
+- Xây dựng menu cho phép người dùng chọn chức năng.
+
+Chức năng chi tiết (gợi ý menu):
+1. Khởi tạo danh sách khoa ban đầu
+   - Cho trước một list gồm một số khoa, ví dụ:
+     ["Điện-Điện tử", "Công nghệ thông tin", "Cơ khí", "Cơ khí động lực", "May - Thời trang", "Ngoại ngữ"]
+   - In ra danh sách sau khi khởi tạo.
+
+2. Hiển thị danh sách khoa
+   - In ra toàn bộ danh sách khoa, mỗi khoa một dòng.
+   - Có đánh số thứ tự từ 1, 2, 3, …
+
+3. Thêm khoa mới
+   - Người dùng nhập tên khoa mới.
+   - Nếu khoa đó CHƯA tồn tại trong list → thêm vào cuối danh sách.
+   - Nếu khoa đã tồn tại → thông báo “Khoa đã tồn tại, không thêm nữa”.
+
+4. Xóa một khoa
+   - Người dùng nhập tên khoa muốn xóa.
+   - Nếu khoa tồn tại → xóa khỏi danh sách.
+   - Nếu không tồn tại → thông báo “Không tìm thấy khoa cần xóa”.
+
+5. Sửa tên khoa
+   - Người dùng nhập tên khoa cũ và tên khoa mới.
+   - Nếu tên khoa cũ tồn tại → thay thế bằng tên khoa mới.
+   - Nếu không tồn tại → thông báo “Không tìm thấy khoa cần sửa”.
+
+6. Tìm kiếm khoa
+   - Người dùng nhập vào một từ khóa (chuỗi con), ví dụ: "Cơ khí".
+   - In ra tất cả các khoa có chứa chuỗi đó trong tên.
+   - Nếu không tìm thấy khoa phù hợp → thông báo “Không có khoa phù hợp”.
+
+7. Thoát chương trình
+   - Kết thúc vòng lặp menu.
+
+Gợi ý kỹ thuật:
+- Sử dụng list, vòng lặp while True, câu lệnh if-elif-else.
+- Có thể dùng toán tử in, phương thức remove(), index(), append(), …
+
+
+-----------------------------------------
+BÀI 2. QUẢN LÝ CỬA HÀNG THỜI TRANG (LIST CÁC DICTIONARY)
+-----------------------------------------
+
+Mô tả:
+Xây dựng chương trình quản lý các mặt hàng thời trang trong một cửa hàng. Mỗi sản phẩm có các thông tin:
+- Mã sản phẩm (ma)
+- Tên sản phẩm (ten)
+- Giá bán (gia)
+- Số lượng tồn kho (so_luong)
+
+Dữ liệu được lưu dưới dạng LIST các DICTIONARY, ví dụ:
+products = [
+    {"ma": "SP001", "ten": "Áo thun", "gia": 150000, "so_luong": 10},
+    {"ma": "SP002", "ten": "Quần jean", "gia": 300000, "so_luong": 5}
+]
+
+Yêu cầu chung:
+- Viết chương trình sử dụng menu để quản lý danh sách sản phẩm.
+- Mỗi chức năng nên viết thành một hàm riêng (nếu có thể): thêm, sửa, xóa, tìm kiếm, thống kê,…
+
+Chức năng chi tiết:
+1. Hiển thị danh sách sản phẩm
+   - In ra dạng bảng: Mã – Tên – Giá – Số lượng.
+   - Nếu danh sách rỗng → thông báo “Chưa có sản phẩm nào”.
+
+2. Thêm sản phẩm mới
+   - Nhập mã, tên, giá, số lượng từ bàn phím.
+   - Kiểm tra nếu mã sản phẩm đã tồn tại → không cho thêm, báo lỗi.
+   - Nếu chưa tồn tại → thêm dictionary mới vào list.
+
+3. Tìm kiếm sản phẩm theo mã
+   - Nhập mã sản phẩm.
+   - Nếu tồn tại → in đầy đủ thông tin sản phẩm.
+   - Nếu không tồn tại → thông báo “Không tìm thấy sản phẩm”.
+
+4. Tìm kiếm sản phẩm theo tên (gần đúng)
+   - Nhập một chuỗi (ví dụ: “áo”, “jean”…).
+   - In ra tất cả sản phẩm có tên chứa chuỗi đó (không phân biệt hoa thường nếu có thể).
+   - Nếu không có sản phẩm phù hợp → thông báo. 
+
+5. Cập nhật sản phẩm
+   - Nhập mã sản phẩm cần cập nhật.
+   - Nếu không tồn tại → báo “Không tìm thấy sản phẩm cần cập nhật”.
+   - Nếu tồn tại → cho người dùng chọn:
+     + Cập nhật tên
+     + Cập nhật giá
+     + Cập nhật số lượng
+     (Có thể cập nhật một hoặc nhiều thông tin).
+
+6. Xóa sản phẩm
+   - Nhập mã sản phẩm cần xóa.
+   - Nếu tồn tại → xóa khỏi list.
+   - Nếu không tồn tại → thông báo lỗi.
+
+7. Thống kê tổng giá trị hàng tồn kho
+   - Tính tổng: sum(gia * so_luong) cho tất cả sản phẩm.
+   - In ra kết quả.
+
+8. Thống kê sản phẩm sắp hết hàng
+   - Cho một ngưỡng tồn kho, ví dụ: số lượng < 5.
+   - In ra tất cả sản phẩm có số lượng nhỏ hơn ngưỡng đó.
+
+9. Thoát chương trình
+   - Kết thúc vòng lặp.
+
+Gợi ý kỹ thuật:
+- Dùng list (products) chứa nhiều dict.
+- Dùng for để duyệt sản phẩm.
+- Dùng hàm để chia nhỏ chương trình dễ quản lý.
+
+
+-----------------------------------------
+BÀI 3. THỐNG KÊ ĐIỂM VÀ ĐÁNH GIÁ SINH VIÊN (DICTIONARY LỒNG NHAU)
+-----------------------------------------
+
+Mô tả:
+Mỗi sinh viên có thông tin:
+- Mã sinh viên (ví dụ: SV001)
+- Tên sinh viên
+- Điểm 3 môn: Toán, Lý, Hóa
+
+Dữ liệu gợi ý lưu dưới dạng DICTIONARY lồng nhau:
+students = {
+    "SV001": {"ten": "Nguyen Van A", "toan": 8, "ly": 7, "hoa": 9},
+    "SV002": {"ten": "Tran Thi B", "toan": 6, "ly": 9, "hoa": 7}
+}
+
+Yêu cầu chung:
+- Xây dựng chương trình có menu để quản lý và thống kê điểm.
+
+Chức năng chi tiết:
+1. Thêm sinh viên
+   - Nhập mã sinh viên, tên, điểm Toán, Lý, Hóa.
+   - Nếu mã sinh viên đã tồn tại → không thêm, báo lỗi.
+   - Nếu chưa tồn tại → thêm mới vào dictionary students.
+
+2. Hiển thị danh sách sinh viên
+   - In ra: Mã SV – Tên – Toán – Lý – Hóa.
+   - Có thể in kèm điểm trung bình (nếu đã tính).
+
+3. Tính điểm trung bình cho từng sinh viên
+   - Điểm trung bình = (Toán + Lý + Hóa) / 3.
+   - Có thể:
+     + Hoặc in trực tiếp ra màn hình.
+     + Hoặc bổ sung thêm key "tb" vào từng sinh viên trong dictionary.
+
+4. Xếp loại sinh viên
+   - Dựa vào điểm trung bình, xếp loại:
+     + TB >= 8.0: Giỏi
+     + 6.5 <= TB < 8.0: Khá
+     + 5.0 <= TB < 6.5: Trung bình
+     + TB < 5.0: Yếu
+   - In ra danh sách sinh viên kèm xếp loại.
+
+5. Tìm sinh viên theo mã
+   - Nhập mã SV.
+   - Nếu tồn tại → in thông tin đầy đủ và điểm TB (nếu có).
+   - Nếu không tồn tại → thông báo.
+
+6. Tìm sinh viên có điểm TB cao nhất
+   - Duyệt qua tất cả sinh viên, tìm điểm TB lớn nhất.
+   - In ra những sinh viên đạt điểm TB cao nhất (có thể nhiều hơn 1 người).
+
+7. Thống kê sinh viên phải thi lại
+   - Thi lại nếu có ít nhất một môn < 5.
+   - In ra danh sách các sinh viên phải thi lại và môn cần thi lại.
+
+8. Xóa sinh viên
+   - Nhập mã SV cần xóa.
+   - Nếu tồn tại → xóa khỏi dictionary.
+   - Nếu không tồn tại → thông báo lỗi.
+
+9. Thoát chương trình
+   - Kết thúc vòng lặp menu.
+
+Gợi ý kỹ thuật:
+- Dùng dictionary lồng nhau.
+- Dùng vòng lặp for duyệt students.items().
+- Chú ý kiểm tra dữ liệu nhập (điểm từ 0 đến 10).
+
+
+-----------------------------------------
+GHI CHÚ CHUNG CHO GIẢNG VIÊN
+-----------------------------------------
+- Sinh viên chỉ cần nộp file .py cho mỗi bài (hoặc gộp nhiều bài trong một file có menu tổng).
+- Khuyến khích sinh viên tách chương trình thành các hàm nhỏ: hien_thi_menu(), them_sinh_vien(), tinh_diem_tb(), ...
+- Có thể chấm thêm điểm khuyến khích nếu sinh viên:
+  + Xử lý ngoại lệ (try/except) khi nhập sai kiểu dữ liệu.
+  + Ghi/đọc dữ liệu từ file (mở rộng thêm nếu muốn).

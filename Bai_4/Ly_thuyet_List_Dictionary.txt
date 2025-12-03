@@ -1,0 +1,148 @@
+LÝ THUYẾT VỀ LIST VÀ DICTIONARY TRONG PYTHON
+
+----------------------------------------
+1. LIST LÀ GÌ?
+----------------------------------------
+List là một cấu trúc dữ liệu trong Python dùng để lưu trữ nhiều giá trị. 
+List có thứ tự, thay đổi được (mutable) và cho phép chứa nhiều kiểu dữ liệu khác nhau.
+
+Ví dụ:
+    ds = [10, "Hello", 3.14, True]
+
+Đặc điểm của List:
+- Có thứ tự: mỗi phần tử có vị trí (index) xác định.
+- Index bắt đầu từ 0.
+- Mutable: có thể thêm, sửa, xóa.
+- Cho phép trùng lặp phần tử.
+- Có thể chứa nhiều kiểu dữ liệu khác nhau.
+
+Cách khai báo List:
+    a = [1, 2, 3, 4]
+    b = ["apple", "banana"]
+    c = [1, "ABC", 3.14, True]
+
+Truy cập phần tử:
+    a[0]       # phần tử đầu
+    a[-1]      # phần tử cuối
+    a[1:3]     # cắt list từ index 1 đến 2
+
+Duyệt list:
+Dùng for:
+    for x in a:
+        print(x)
+
+Dùng while:
+    i = 0
+    while i < len(a):
+        print(a[i])
+        i += 1
+
+Các phương thức quan trọng của List:
+    append(x)    - thêm x vào cuối list
+    insert(i, x) - chèn x vào vị trí i
+    remove(x)    - xóa phần tử có giá trị x
+    pop(i)       - xóa phần tử tại vị trí i
+    clear()      - xóa toàn bộ list
+    count(x)     - đếm số lần xuất hiện của x
+    index(x)     - trả về vị trí của x
+    sort()       - sắp xếp tăng dần
+    reverse()    - đảo ngược list
+
+List lồng nhau:
+    a = [[1, 2], [3, 4], [5, 6]]
+
+
+----------------------------------------
+2. DICTIONARY LÀ GÌ?
+----------------------------------------
+Dictionary (từ điển) là cấu trúc dữ liệu dạng key – value.
+Mỗi phần tử là một cặp khóa – giá trị. 
+Truy cập nhanh bằng key và không dựa vào index.
+
+Ví dụ:
+    sv = {"ma": "SV001", "ten": "Nguyen Van A", "diem": 8.5}
+
+Đặc điểm của Dictionary:
+- Dạng ánh xạ key → value.
+- Không có thứ tự như list (nhưng giữ thứ tự khai báo từ Python 3.7 trở đi).
+- Key là duy nhất.
+- Mutable: có thể thêm, sửa, xóa.
+- Value có thể là bất kỳ kiểu dữ liệu nào.
+
+Khai báo Dictionary:
+    d = {"ten": "An", "tuoi": 20, "diem": 9.0}
+
+Truy cập giá trị:
+    d["ten"]         # "An"
+    d.get("diem")    # 9.0
+    d.get("lop", "Không tồn tại")   # tránh lỗi khi key không tồn tại
+
+Duyệt dictionary:
+Duyệt key:
+    for k in d.keys():
+        print(k)
+
+Duyệt value:
+    for v in d.values():
+        print(v)
+
+Duyệt cả key và value:
+    for k, v in d.items():
+        print(k, v)
+
+Các phương thức quan trọng:
+    keys()      - lấy toàn bộ key
+    values()    - lấy toàn bộ value
+    items()     - lấy toàn bộ (key, value)
+    get(key)    - lấy giá trị an toàn
+    update({...}) - gộp dictionary
+    pop(key)    - xóa phần tử bằng key
+    clear()     - xóa toàn bộ
+
+Thêm / sửa phần tử:
+    d["email"] = "abc@gmail.com"  # thêm
+    d["ten"] = "Nguyen A"         # sửa
+
+Xóa phần tử:
+    d.pop("email")
+    del d["ten"]
+    d.clear()
+
+Dictionary lồng nhau:
+    students = {
+        "SV001": {"ten": "An", "toan": 8, "ly": 7},
+        "SV002": {"ten": "Binh", "toan": 9, "ly": 6}
+    }
+
+
+----------------------------------------
+3. SO SÁNH LIST VÀ DICTIONARY
+----------------------------------------
+Tiêu chí                 | List                              | Dictionary
+-------------------------|------------------------------------|-------------------------------
+Truy cập                | Qua index                         | Qua key
+Thứ tự                  | Có                                | Không cố định
+Key/index               | 0, 1, 2, ...                      | Key do người dùng tự đặt
+Trùng lặp               | Cho phép                          | Không cho phép trùng key
+Dùng khi                | Dữ liệu tuần tự                   | Dữ liệu dạng ánh xạ
+Tốc độ truy cập         | Nhanh theo index                  | Rất nhanh theo key
+
+Khi nào dùng List?
+- Lưu danh sách sản phẩm, điểm, khoa, danh sách tuần tự.
+
+Khi nào dùng Dictionary?
+- Tra cứu theo mã, lưu thông tin dạng thuộc tính (key – value).
+
+Khi dữ liệu phức tạp:
+- Dùng list chứa dictionary (list of dict).
+- Dùng dictionary lồng nhau (nested dict).
+
+
+----------------------------------------
+KẾT LUẬN
+----------------------------------------
+List và Dictionary là hai cấu trúc dữ liệu quan trọng nhất trong Python.
+- List phù hợp cho dữ liệu tuần tự.
+- Dictionary phù hợp cho dữ liệu dạng ánh xạ key → value.
+
+Nắm chắc hai cấu trúc này sẽ giúp lập trình Python dễ dàng hơn và xây dựng được nhiều ứng dụng thực tế.
