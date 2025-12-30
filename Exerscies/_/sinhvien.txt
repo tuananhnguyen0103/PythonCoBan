@@ -1,0 +1,5 @@
+SV001|Nguyen Van An|Nam|2001|Ha Noi|0987654321|an.nguyen@utehy.edu.vn
+SV002|Tran Thi Binh|Nu|2000|Hai Duong|0912345678|binh.tran@utehy.edu.vn
+SV003|Le Quang Huy|Nam|2002|Hung Yen|0901122334|huy.le@utehy.edu.vn
+SV004|Pham Thi Mai|Nu|1999|Bac Ninh|0977889900|mai.pham@utehy.edu.vn
+SV005|Do Tuan Anh|Nam|2001|Thai Binh|0966554433|tuananh.do@utehy.edu.vn

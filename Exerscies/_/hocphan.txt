@@ -1,0 +1,7 @@
+HP001|Toan Roi Rac|ĐC|3
+HP002|Lap Trinh Python|CSN|4
+HP003|Cau Truc Du Lieu|CSN|3
+HP004|Hoc May|CN|3
+HP005|Tri Tue Nhan Tao|CN|3
+HP006|Do An Tot Nghiep|ĐA|10
+HP007|Thuc Tap Doanh Nghiep|TT|5
